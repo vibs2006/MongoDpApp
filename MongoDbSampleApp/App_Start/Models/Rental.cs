@@ -33,5 +33,10 @@ namespace MongoDbSampleApp.App_Start.Models
 
         [BsonRepresentation(BsonType.Double)]
         public decimal Price { get; set; }
+
+        internal void AdjustPrice(AdjustPrice price)
+        {
+            Price = price.NewPrice;
+        }
     }
 }

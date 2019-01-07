@@ -150,6 +150,7 @@
     <Compile Include="App_Start\Models\Rental.cs" />
     <Compile Include="App_Start\RealEstateContext.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\ViewModels\AdjustPrice.cs" />
     <Compile Include="App_Start\ViewModels\PostRental.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RentalsController.cs" />
@@ -204,6 +205,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Rentals\Post.cshtml" />
     <Content Include="Views\Rentals\Index.cshtml" />
+    <Content Include="Views\Rentals\AdjustPrice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

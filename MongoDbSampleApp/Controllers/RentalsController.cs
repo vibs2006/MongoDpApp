@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MongoDbSampleApp.App_Start;
+using MongoDB.Bson;
 
 namespace MongoDbSampleApp.Controllers
 {
@@ -19,6 +20,21 @@ namespace MongoDbSampleApp.Controllers
         {
             var rentals = context.Rentals.FindAll();
             return View(rentals);
+        }
+
+        public ActionResult AdjustPrice(string id)
+        {
+            var rental = context.Rentals.FindOneById(new ObjectId(id));
+            return View(rental);
+        }
+
+        [HttpPost]
+        public ActionResult AdjustPrice(string id,AdjustPrice price)
+        {
+            var rental = context.Rentals.FindOneById(new ObjectId(id));
+            rental.AdjustPrice(price);
+            context.Rentals.Save(rental);
+            return RedirectToAction("Index");
         }
         
         public ActionResult Post()
