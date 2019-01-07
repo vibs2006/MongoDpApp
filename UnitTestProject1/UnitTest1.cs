@@ -13,6 +13,7 @@ namespace UnitTestProject1
         public void ToDocument_RentalWithAnId_IdIsRepresentedAsAnObjectID()
         {
             var rental = new Rental();
+
             rental.Id = ObjectId.GenerateNewId().ToString();
 
             var bsonDocument = rental.ToBsonDocument();

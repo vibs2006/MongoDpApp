@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using MongoDbSampleApp.App_Start.Models;
 using MongoDbSampleApp.Properties;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,14 @@ namespace MongoDbSampleApp.App_Start
             //Refer - https://stackoverflow.com/questions/29457098/c-sharp-mongodb-driver-getserver-is-gone-what-now
             var server = client.GetServer();
             Database = server.GetDatabase(Settings.Default.RealEstateDatabase);
+        }
+
+        public MongoCollection<Rental> Rentals
+        {
+            get
+            {
+                return Database.GetCollection<Rental>("rentals");
+            }
         }
     }
 }
