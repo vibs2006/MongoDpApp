@@ -53,6 +53,12 @@ namespace MongoDbSampleApp.Controllers
             return View(rental);
         }
 
+        public ActionResult Details(string id)
+        {
+            var rental = context.Rentals.FindOneById(new ObjectId(id));
+            return View(rental);
+        }
+
         [HttpPost]
         public ActionResult AdjustPrice(string id, AdjustPrice price)
         {
