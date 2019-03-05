@@ -27,7 +27,10 @@ namespace MongoDbSampleApp.App_Start.Models
 
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+
+        [BsonRepresentation(BsonType.String)]
         public string Description { get; set; }
+
         public int NumberOfRooms { get; set; }
         public List<string> Address { get; set; } = new List<string>();
 

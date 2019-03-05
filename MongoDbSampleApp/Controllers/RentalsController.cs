@@ -117,11 +117,12 @@ namespace MongoDbSampleApp.Controllers
         {
             for (int i = 1; i <= numberOfIterations; i++)
             {
-                PostRental postRental = new PostRental
+                Rental postRental = new Rental
                 {
+                    //$"Test Address {i + 1}"
                     Price = i + 1,
-                    Address = insertString,
-                    Description = $"Test Description {i+1}",
+                    Address = new List<string> { $"Test Address {i + 1}" },
+                    Description = insertString ,
                     NumberOfRooms = new Random().Next(0,10)
                 };
                 context.Rentals.Insert(postRental);
