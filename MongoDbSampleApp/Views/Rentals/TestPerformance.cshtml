@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "TestPerformance";
+}
+
+<h2>TestPerformance</h2>
+
+<form id="frmTestPerformance" action="@Url.Action("TestPerformance","Rentals")" method="post">
+    <p>
+        <select id="dropdown" name="dropdown">
+            <option value="">-Select Db Type-</option>
+            <option value="mongodb">Mongo Db</option>
+            <option value="sqlserver">SQL Server</option>
+        </select>
+    </p>
+    <p>
+        Enter Number of Iterations : <input type="number" name="numberOfIterations" id="numberOfIterations" value="1000" />
+    </p>
+    <p>
+        <input type="submit" value="Test Performance" />
+    </p>
+</form>
+
+

@@ -41,5 +41,32 @@ namespace MongoDbSampleApp.Properties {
                 return ((string)(this["RealEstateDatabase"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("TestTable1")]
+        public string SqlServerTable {
+            get {
+                return ((string)(this["SqlServerTable"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Name")]
+        public string SqlServerColumnName {
+            get {
+                return ((string)(this["SqlServerColumnName"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Id")]
+        public string SqlServerColumnId {
+            get {
+                return ((string)(this["SqlServerColumnId"]));
+            }
+        }
     }
 }

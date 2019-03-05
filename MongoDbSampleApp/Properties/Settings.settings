@@ -12,5 +12,14 @@
     <Setting Name="RealEstateDatabase" Type="System.String" Scope="Application">
       <Value Profile="(Default)">realestate</Value>
     </Setting>
+    <Setting Name="SqlServerTable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TestTable1</Value>
+    </Setting>
+    <Setting Name="SqlServerColumnName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Name</Value>
+    </Setting>
+    <Setting Name="SqlServerColumnId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Id</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
